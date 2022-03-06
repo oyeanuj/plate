@@ -12,6 +12,7 @@ export interface ImagePlugin {
    * The method receives the base64 dataUrl of the uploaded image, and should return the URL of the uploaded image.
    */
   uploadImage?: (
-    dataUrl: string | ArrayBuffer
+    dataUrl: string | ArrayBuffer,
+    fileObj: any
   ) => Promise<string | ArrayBuffer> | string | ArrayBuffer;
 }

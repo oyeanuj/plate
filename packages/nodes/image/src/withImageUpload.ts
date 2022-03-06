@@ -41,7 +41,7 @@ export const withImageUpload: WithOverride<{}, ImagePlugin> = (
               return;
             }
             const uploadedUrl = uploadImage
-              ? await uploadImage(reader.result)
+              ? await uploadImage(reader.result, file)
               : reader.result;
 
             insertImage(editor, uploadedUrl);
